@@ -6,6 +6,7 @@ import revolver from './assets/revolver.png'
 import Boss from './bossBattle.jsx'
 import sawed from './assets/sawed.mp3';
 import outlaws from './assets/outlaws.mp3';
+import boss1Image from './assets/movingman_background.png';
 
 // 메인페이지 사격 효과를 위한 이미지 및 소리 import
 import bulletEffectImg from './assets/gunshot.png';
@@ -29,8 +30,8 @@ function App() {
   const [clicks, setClicks] = useState([]);
 
   const bossList = [
-    { id: 0, name: "무법자", image: boss0Image, limitTime: 1400, pattern: "normal" },
-    { id: 1, name: "무빙맨", image: boss0Image, limitTime: 2400, pattern: "dodge" },
+    { id: 0, name: "무법자", image: boss0Image, limitTime: 1040, pattern: "normal" },
+    { id: 1, name: "무빙맨", image: boss1Image, limitTime: 2400, pattern: "dodge" },
     { id: 2, name: "디럭스파이터", image: boss0Image, limitTime: 2540, pattern: "money" },
     { id: 3, name: "아서모건", image: boss0Image, limitTime: 4, pattern: "best" },
   ];
