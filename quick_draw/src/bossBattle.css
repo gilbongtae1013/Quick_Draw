@@ -10,10 +10,12 @@ body {
 }
 #boss {
     width: 104px;
+    height: 254px;
     position: absolute;
     top: 0px;
     right: 440px;
     z-index: 4;
+    object-fit: contain;
 }
 #garim {
     width: 4000px;
@@ -56,6 +58,7 @@ body {
     visibility: visible;
     width: 100px;
     background-color: transparent;
+    border: 0px;
     height: 254px;
     position: absolute;
     z-index: 5;
@@ -73,7 +76,6 @@ body {
   background-color: rgba(0, 0, 0, 0.65); /* 투명한 검은 배경 (배경을 살짝 어둡게 눌러줌) */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   z-index: 9999; /* 무조건 최상단 노출 */
   pointer-events: auto; /* 뒷배경 클릭 차단 */
