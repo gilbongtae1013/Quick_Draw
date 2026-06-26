@@ -1,0 +1,9 @@
+#player {
+    width: 567.4px;
+    position: absolute;
+    left: 40px;
+    top: 0px;
+}
+body {
+    overflow: hidden;
+}

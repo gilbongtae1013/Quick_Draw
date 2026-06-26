@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'JoseonPalace';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGs.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+#logo {
+  width: 440px;
+  position: absolute;
+  animation: logoshow 1.4s forwards;
+}
+@keyframes logoshow {
+  0% {width: 40px;}
+  74% {margin-bottom: 0px; width: 540px;}
+  100% {width: 440px;}
+}
+body {
+  background-image: url('assets/start_background.png');
+  background-size: cover;
+}
+#logo_box {
+  display: flex;
+  justify-content: center;
+}
+#boss_select_container {
+  width: 100%;
+  height: 340px;
+  margin-top: 284px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+#boss_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+#boss_box img {
+  width: 540px;
+  border: 4px solid red;
+  cursor: pointer;
+}
+#boss_select_container button{
+  margin: 74px 14px;
+  height: 240px;
+  width: 140px;
+  background-size: cover;
+  cursor: pointer;
+}
+#button1 {
+  rotate: -45deg;
+  transform: scaleX(-1);
+  width: 134px;
+}
+#button2 {
+  rotate: 45deg;
+  width: 134px;
+}
