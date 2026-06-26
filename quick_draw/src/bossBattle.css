@@ -3,7 +3,139 @@
     position: absolute;
     left: 40px;
     top: 0px;
+    z-index: 4;
 }
 body {
     overflow: hidden;
+}
+#boss {
+    width: 104px;
+    position: absolute;
+    top: 0px;
+    right: 440px;
+    z-index: 4;
+}
+#garim {
+    width: 4000px;
+    height: 10000px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+}
+#garim.hide {
+    visibility: hidden;
+}
+#revolver {
+    width: 140px;
+    height: 364px;
+    cursor: grab;
+    position: absolute;
+    top: 344px;
+    left: 444px;
+    opacity: 0;
+    z-index: 5;
+}
+#deadeye {
+    width: 4000px;
+    height: 4000px;
+    background-color: rgba(183, 183, 0, 0.541);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    visibility: hidden;
+}
+#deadeye.show {
+    visibility: visible;
+}
+#bossbutton {
+    visibility: hidden;
+}
+#bossbutton.show {
+    visibility: visible;
+    width: 100px;
+    background-color: transparent;
+    height: 254px;
+    position: absolute;
+    z-index: 5;
+    top: 0px;
+    right: 440px;
+    cursor: move;
+}
+/* 유다희(YOU DIED) 컴포넌트 전체를 감싸는 컨테이너 */
+.you-died-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.65); /* 투명한 검은 배경 (배경을 살짝 어둡게 눌러줌) */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* 무조건 최상단 노출 */
+  pointer-events: auto; /* 뒷배경 클릭 차단 */
+  animation: fadeInBg 1s ease-in-out forwards;
+}
+
+/* 거대하고 붉은 YOU DIED 텍스트 */
+.you-died-text {
+  font-size: 8rem; /* 크고 아름다운 크기 */
+  font-weight: 900;
+  color: #8b0000; /* 깊은 핏빛 레드 (DarkRed) */
+  letter-spacing: 15px; /* 글자 사이 간격 넓히기 */
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  font-family: 'Georgia', 'Times New Roman', serif; /* 서부극 느낌의 세리프 폰트 */
+  
+  /* 🎯 핵심: 투명 배경에서도 글자가 돋보이게 만드는 핏빛 네온 그림자 효과 */
+  text-shadow: 
+    0 0 10px rgba(139, 0, 0, 0.8),
+    0 0 20px rgba(255, 0, 0, 0.5),
+    0 0 40px rgba(0, 0, 0, 0.9);
+    
+  /* 글자가 서서히 나타나며 커지는 애니메이션 */
+  animation: zoomInText 1.5s ease-out forwards;
+}
+
+/* 다시 시작 버튼 스타일 */
+.retry-button {
+  background-color: transparent;
+  color: #cccccc;
+  border: 2px solid #8b0000;
+  padding: 12px 35px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.retry-button:hover {
+  background-color: #8b0000;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(139, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+/* 🎬 애니메이션 정의 */
+@keyframes fadeInBg {
+  from { background-color: rgba(0, 0, 0, 0); }
+  to { background-color: rgba(0, 0, 0, 0.65); }
+}
+
+@keyframes zoomInText {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
 }

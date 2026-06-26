@@ -40,6 +40,7 @@ body {
 #boss_box img {
   width: 540px;
   border: 4px solid red;
+  box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.5);
   cursor: pointer;
 }
 #boss_select_container button{
@@ -48,6 +49,8 @@ body {
   width: 140px;
   background-size: cover;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 #button1 {
   rotate: -45deg;
